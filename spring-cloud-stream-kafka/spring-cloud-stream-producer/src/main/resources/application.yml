@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  cloud:
+    function:
+      definition: sendTransactionEvent
+    stream:
+      bindings:
+        sendTransactionEvent-out-0:
+          destination: financial-transactions
+
+      kafka:
+        binder:
+          brokers: localhost:9094
+
+  integration:
+    poller:
+      fixed-delay: 5000
+
