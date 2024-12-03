@@ -6,8 +6,12 @@ spring:
     function:
       definition: sendTransactionEvent
     stream:
+      output-bindings:
+        sendTransfer-out-0
       bindings:
         sendTransactionEvent-out-0:
+          destination: financial-transactions
+        sendTransfer-out-0:
           destination: financial-transactions
 
       kafka:
@@ -16,5 +20,5 @@ spring:
 
   integration:
     poller:
-      fixed-delay: 5000
+      fixed-delay: 60000
 
