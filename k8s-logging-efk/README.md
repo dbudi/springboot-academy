@@ -98,15 +98,8 @@ kubectl get pods -n kube-system -w
 
 ```
 
-**Step 10: Add Dapr Helm Repository** (Optional)
 
-```
-helm repo add dapr https://dapr.github.io/helm-charts/
-helm repo update
-```
-
-
-**Step 11: Port Forward Kibana**
+**Step 10: Port Forward Kibana**
 
 To access Kibana web interface:
 
@@ -115,7 +108,7 @@ kubectl port-forward svc/kibana-kibana 5601 -n efk-monitoring
 
 ```
 
-**Step12: Deploy the sample application**
+**Step11: Deploy the sample application**
 
 ```
 kubectl apply -f k8s-app.yml
