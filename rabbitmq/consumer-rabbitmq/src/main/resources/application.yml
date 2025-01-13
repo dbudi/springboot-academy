@@ -1,0 +1,16 @@
+# CONSUMER SERVER PORT
+server:
+  port: 8082
+
+  # Queue properties
+rabbitmq:
+  queue: sms_notification
+  exchange: sms_exchange
+
+# MESSAGE BROKER CONFIG
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest

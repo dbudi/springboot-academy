@@ -1,0 +1,17 @@
+# PRODUCER SERVER PORT
+server:
+  port: 8081
+
+  # Queue properties
+rabbitmq:
+  queue: sms_notification
+  exchange: sms_exchange
+  routingkey: sms_routingkey
+
+# MESSAGE BROKER CONFIG
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
